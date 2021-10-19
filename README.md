@@ -1,9 +1,5 @@
 # Point-Based Modeling of Human Clothing
 
-This is an official PyTorch code repository of the paper "Point-Based Modeling of Human Clothing" (accepted to ICCV, 2021).
-
-<p align="center"><img src="static/vton_all.gif"></p>
-
 <p align="center">
   <b>
   <a href="https://openaccess.thecvf.com/content/ICCV2021/html/Zakharkin_Point-Based_Modeling_of_Human_Clothing_ICCV_2021_paper.html">Paper</a> 
@@ -11,6 +7,10 @@ This is an official PyTorch code repository of the paper "Point-Based Modeling o
   | <a href="https://youtu.be/kFrAu415kDU">Video</a>
     </b>
 </p>
+
+<p align="center"><img src="static/vton_all.gif"></p>
+
+This is an official PyTorch code repository of the paper "Point-Based Modeling of Human Clothing" (accepted to ICCV, 2021).
 
 ## Setup
 
