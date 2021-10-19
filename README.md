@@ -120,3 +120,11 @@ If you find our work helpful, please do not hesitate to cite us:
 ```
 
 Non-commercial use only.
+
+## Related projects
+
+- [Cloud Transformers](https://github.com/saic-vul/cloud_transformers)
+- [Neural Point-Based Graphics](https://github.com/alievk/npbg)
+- [Neural Textures](https://github.com/saic-vul/neural-textures) and [StylePeople](https://github.com/saic-vul/style-people)
+
+We also thank the authors of [Cloth3D](https://competitions.codalab.org/competitions/24768#learn_the_details) and [PeopleSnapshot](https://github.com/thmoa/videoavatars) datasets.
