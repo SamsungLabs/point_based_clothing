@@ -1,0 +1,3 @@
+[submodule "cloud_transformers"]
+	path = cloud_transformers
+	url = https://github.com/saic-vul/cloud_transformers
