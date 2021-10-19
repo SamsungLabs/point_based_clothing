@@ -1,8 +1,16 @@
 # Point-Based Modeling of Human Clothing
 
+This is an official PyTorch code repository of the paper "Point-Based Modeling of Human Clothing" (accepted to ICCV, 2021).
+
 <p align="center"><img src="static/vton_all.gif"></p>
 
-This is an official PyTorch code repository of the paper "Point-Based Modeling of Human Clothing" (accepted to ICCV, 2021).
+<p align="center">
+  <b>
+  <a href="https://openaccess.thecvf.com/content/ICCV2021/html/Zakharkin_Point-Based_Modeling_of_Human_Clothing_ICCV_2021_paper.html">Paper</a> 
+  | <a href="https://saic-violet.github.io/point-based-clothing">Project page</a>
+  | <a href="https://youtu.be/kFrAu415kDU">Video</a>
+    </b>
+</p>
 
 ## Setup
 
@@ -63,68 +71,4 @@ The learned outfit codes are saved to `out/outfit_code/outfit_codes_<dset_name>.
   <img src="static/outfit_code_fitting_fine.gif" alt="outfit_code_fitting_fine" width="224px">
 </p>
 
-**Note:** `visibility_thr` hyperparameter in `fit_outfit_code.py` may affect the quality of result point cloud (e.f. make it more sparse). Feel free to tune it if the result seems not perfect.
-
-<p align="center">
-  <img src="static/vis_thr_360.gif" alt="vis_thr_360">
-</p>
-
-#### Inference
-
-<p align="center">
-  <img src="static/outfit_code_inference.png" alt="outfit_code_inference" height="280px">
-</p>
-
-To further infer the fitted outfit style on the train or on new subjects please see `infer_outfit_code.ipynb`. To run jupyter notebook server from the docker, run this inside the container:
-
-```
-jupyter notebook --ip=0.0.0.0 --port=8087 --no-browser 
-```
-
-### Appearance (neural descriptors)
-
-#### Fitting
-
-To fit a clothing appearance to a sequence of frames one can run:
-```
-python fit_appearance.py --config_name=appearance/psp_male-3-casual
-```
-
-The learned neural descriptors `ntex0_<epoch>.pth` and neural rendering network weights `model0_<epoch>.pth` are saved to `out/appearance/<dset_name>/<subject_id>/<experiment_dir>/checkpoints/` by default. The visualization of the process is in `out/appearance/<dset_name>/<subject_id>/<experiment_dir>/visuals/`.
-
-#### Inference
-
-<p align="center">
-  <img src="static/appearance_inference.png" alt="appearance_inference" width=500px>
-</p>
-
-To further infer the fitted clothing point cloud and its appearance on the train or on new subjects please see `infer_appearance.ipynb`. To run jupyter notebook server from the docker, run this inside the container:
-
-```
-jupyter notebook --ip=0.0.0.0 --port=8087 --no-browser 
-```
-
-## Citation
-
-If you find our work helpful, please do not hesitate to cite us:
-
-```
-@InProceedings{Zakharkin_2021_ICCV,
-    author    = {Zakharkin, Ilya and Mazur, Kirill and Grigorev, Artur and Lempitsky, Victor},
-    title     = {Point-Based Modeling of Human Clothing},
-    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-    month     = {October},
-    year      = {2021},
-    pages     = {14718-14727}
-}
-```
-
-Non-commercial use only.
-
-## Related projects
-
-- [Cloud Transformers](https://github.com/saic-vul/cloud_transformers)
-- [Neural Point-Based Graphics](https://github.com/alievk/npbg)
-- [Neural Textures](https://github.com/saic-vul/neural-textures) and [StylePeople](https://github.com/saic-vul/style-people)
-
-We also thank the authors of [Cloth3D](https://competitions.codalab.org/competitions/24768#learn_the_details) and [PeopleSnapshot](https://github.com/thmoa/videoavatars) datasets.
+**Note:** `visibility_thr` hyperparameter in `fit_outfit_code.py` may affect the quality of result point cloud (e.f. make it more sparse). F
