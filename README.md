@@ -109,11 +109,13 @@ jupyter notebook --ip=0.0.0.0 --port=8087 --no-browser
 If you find our work helpful, please do not hesitate to cite us:
 
 ```
-@inproceedings{zakharkin2021pointbasedclothing,
-  title={Point-Based Modeling of Human Clothing},
-  author={Zakharkin, Ilya and Mazur, Kirill and Grigorev, Artur and Lempitsky, Victor},
-  booktitle={International Conference on Computer Vision (ICCV)},
-  year={2021}
+@InProceedings{Zakharkin_2021_ICCV,
+    author    = {Zakharkin, Ilya and Mazur, Kirill and Grigorev, Artur and Lempitsky, Victor},
+    title     = {Point-Based Modeling of Human Clothing},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2021},
+    pages     = {14718-14727}
 }
 ```
 
