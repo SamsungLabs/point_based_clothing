@@ -1,0 +1,34 @@
+# data paths
+data_root: "samples/internet_images"
+rgb_dir: "images"
+segm_dir: "segmentations/cloth"
+smpl_dir: "smpl/results"
+
+# draping network setup
+pretrained_ct_path: "checkpoints/draping_network_90_epochs.pth"
+pcl_size: 8192
+glovec_size: 8
+encoder_depth: 5
+encoder_bn: False
+ct_num_latent: 512
+ct_heads: '1,1,1,1,1,1'
+ct_feats_dims: '16,16,64,64,128,128'
+freeze: 'encoder,start,attentions_decoder,final'
+
+# renderer setup
+ntex_dim: 16
+image_size: [256, 256]
+
+# optimizer setup
+beta1: 0.5
+beta2: 0.9
+gamma: 0.992
+lr_glo: !!float 1e-1
+
+# training setup
+n_people: 4
+max_iter_coarse: 100
+max_iter_fine: 100
+
+# visualization setup
+vis_image_size: [512, 512]

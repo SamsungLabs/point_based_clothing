@@ -1,0 +1,63 @@
+generator: npbg
+draping_network: draping_network_wrapper
+discriminator_list: ""
+criterions: perceptual, dice
+dataloader: psp
+runner: normalized_nod_aug
+wscheduler: identity
+
+pretrained_ct_path: 'checkpoints/draping_network_90_epochs.pth'
+
+n_people: 1
+pretrained_glovecs_path: 'out/outfit_code/outfit_codes_psp.pkl'
+pretrained_glovecs_pids: 'male-1-casual'
+visibility_thr: 2e-3
+
+# generator
+segm_channels: 1
+gen_in_channels: 17
+ntex_channels: 16
+norm_gen: 'batch'
+
+# discriminators
+dis_in_channels: 4
+norm_dis: 'batch'
+
+# learning rates
+lr_gen: 1e-4
+lr_tex: 1e-2
+lr_glo: 0
+lr_ct_encoder: 0
+lr_ct_decoder: 0
+lr_dis: 2e-3
+beta1: 0.5
+
+# criterions
+dice_weight: 1e+2
+perc_weight: 1.
+gan_weight: 10.
+perc_n_relus: 10
+
+# data
+data_root: 'samples/psp'
+rgb_dir: 'rgb'
+segm_dir: 'segm_cloth'
+smpl_dir: 'smpl'
+# K_file: 'cam_params.pkl'
+splits_dir: 'samples/psp/splits/male-1-casual'
+
+imsize: 512
+rgb_ex: '.png'
+segm_ex: '.png'
+
+save_frequency: 5
+eval_frequency: 10
+saver: visual_per_item_tr
+num_gpus: 1
+
+experiments_dir: "out/appearance/psp/male-1-casual"
+batch_size: 2
+num_workers: 16
+log_frequency_images: 100
+
+safe_kill: False
