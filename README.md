@@ -3,7 +3,7 @@
 <p align="center">
   <b>
   <a href="https://openaccess.thecvf.com/content/ICCV2021/html/Zakharkin_Point-Based_Modeling_of_Human_Clothing_ICCV_2021_paper.html">Paper</a> 
-  | <a href="https://www.ilia.ai/research/point-based-clothing">Project page</a>
+  | <a href="https://saic-violet.github.io/point-based-clothing">Project page</a>
   | <a href="https://youtu.be/kFrAu415kDU">Video</a>
     </b>
 </p>
@@ -41,8 +41,16 @@ This is an official PyTorch code repository of the paper "Point-Based Modeling o
 - Download the SMPL neutral model from [SMPLify project page](https://smplify.is.tue.mpg.de/login.php): 
   - Register, go to the `Downloads` section, download `SMPLIFY_CODE_V2.ZIP`, and unpack it;
   - Move `smplify_public/code/models/basicModel_neutral_lbs_10_207_0_v1.0.0.pkl` to `data/smpl_models/SMPL_NEUTRAL.pkl`.
-- Download models checkpoints (~570 Mb): [Google Drive](https://drive.google.com/file/d/16QFuHhou_C4EY6GvKCgbJvgbkIycITHw/view?usp=sharing) and place them to the `checkpoints/` folder;
-- Download a sample data we provide to check the appearance fitting (~480 Mb): [Google Drive](https://drive.google.com/file/d/13ma8J0-ah4sVn0uH_hYSoJ_GLMxFpoQa/view?usp=sharing), unpack it, and place `psp/` folder to the `samples/` folder.
+- Download models checkpoints (~570 Mb): [Google Drive](https://drive.google.com/file/d/1l9BKJyMo3tfSTh1u6NMFP9VBxXCMf-ZJ/view?usp=share_link) and place them to the `checkpoints/` folder;
+- Download a sample data we provide to check the appearance fitting (~480 Mb): [Google Drive](https://drive.google.com/file/d/1QBZu9SLNoXdhLdTYABU-_KinjUAoQfw-/view?usp=share_link), unpack it, and place `psp/` folder to the `samples/` folder.
+
+## Custom data
+
+To run our pipeline on custom data (images or videos):
+- run [our fork](https://github.com/izakharkin/Graphonomy#inference-point_based_clothing) of Graphonomy to obtain clothing segmentation mask in our format;
+- run e.g. [SMPLify](https://smplify.is.tue.mpg.de/download.php) or any other suitable method to obtain the SMPL-parameters (3D body pose and shape ground truth).
+
+We recommend to run these methods on [`internet_images/`](https://github.com/saic-vul/point_based_clothing/tree/main/samples/internet_images) test dataset to make sure that your outputs exactly match the format inside [`internet_images/segmentations/cloth`](https://github.com/saic-vul/point_based_clothing/tree/main/samples/internet_images/segmentations/cloth) and [`internet_images/smpl/results`](https://github.com/saic-vul/point_based_clothing/tree/main/samples/internet_images/smpl/results).
 
 ## Run
 
