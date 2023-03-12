@@ -3,7 +3,7 @@
 <p align="center">
   <b>
   <a href="https://openaccess.thecvf.com/content/ICCV2021/html/Zakharkin_Point-Based_Modeling_of_Human_Clothing_ICCV_2021_paper.html">Paper</a> 
-  | <a href="https://saic-violet.github.io/point-based-clothing">Project page</a>
+  | <a href="https://www.ilia.ai/research/point-based-clothing">Project page</a>
   | <a href="https://youtu.be/kFrAu415kDU">Video</a>
     </b>
 </p>
@@ -119,6 +119,18 @@ To further infer the fitted clothing point cloud and its appearance on the train
 ```
 jupyter notebook --ip=0.0.0.0 --port=8087 --no-browser 
 ```
+
+## Q&A
+
+Question:
+> Trying to obtain the final point cloud generated during the outfit_coding module. Is there a way to save the 3D point clouds used to generate the output images/videos when running fit outfit code?
+
+Answer:
+> There is no implemented function for that out-of-the-box, but one can access the point clouds themselves via working with data dicts:
+> * during outfit code fitting, you could start by saving [`cloth_pcd`](https://github.com/SamsungLabs/point_based_clothing/blob/5ee614d9464e273b963a637926bfb481630aefdf/src/outfit_code/fit.py#L48) to a file and see if it is in the format you need. This should be a point cloud predicted by a draping network from a current `outfit_code`.
+> * during inference, you could start right from the [notebook](https://github.com/SamsungLabs/point_based_clothing/blob/main/infer_outfit_code.ipynb), the third code cell. You can access the point cloud of the clothing by just returning [`cloth_pcd`](https://github.com/SamsungLabs/point_based_clothing/blob/5ee614d9464e273b963a637926bfb481630aefdf/src/outfit_code/infer.py#L37) from `infer_pid()` function.
+> 
+> The actual place where the draping network predicts the clothing point cloud from an `outfit_code` is only one - it is [here](https://github.com/SamsungLabs/point_based_clothing/blob/5ee614d9464e273b963a637926bfb481630aefdf/src/outfit_code/fit.py#L32) inside the `forward_pass()` function.
 
 ## Citation
 
